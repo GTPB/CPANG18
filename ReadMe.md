@@ -17,7 +17,7 @@ This is the link to the [course webpage](http://gtpb.igc.gulbenkian.pt/bicourses
 
 ---
 
-The source for this course webpage is [on github](https://github.com/GTPB/CPANG18).
+[Github Pages](https://pages.github.com) provide a simple way to make a website using Markdown and git.
 
 <br>
 
