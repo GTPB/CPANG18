@@ -14,7 +14,7 @@ schemadotorg:
 ## Tobias Marschall
 **Affiliation:** Center for Bioinformatics at Saarland University and Max Planck Institute for Informatics
 
-<img src="https://www.mpi-inf.mpg.de/~marschal/marschal.jpg" height="220" width="170" align="left" style="margin-right: 3%; margin-bottom: 0.3em;">
+<img src="./images/instructors/tobias_marschall.png" height="220" width="170" align="left" style="margin-right: 3%; margin-bottom: 0.3em;">
 
 [Tobias Marschall ](http://www.zbi.uni-saarland.de/en/junior-groups/algorithms-computational-genomics.html) is an assistant professor at the Center for Bioinformatics at Saarland University and affiliated with the Max Planck Institute for Informatics as a senior researcher. He is heading the Algorithms for Computational Genomics group.
 
@@ -42,7 +42,7 @@ Raised in Kentucky, Erik obtained an undergraduate degree in the social sciences
 ### Jordan Eizenga
 **Affiliation:** University of California Santa Cruz
 
-<img src="https://cgl.genomics.ucsc.edu/wp-content/uploads/2016/07/CGL_Team_Pics_Jordan_Einzeinga.png" height="220" width="170" align="left" style="margin-right: 3%; margin-bottom: 0.3em;">
+<img src="./images/instructors/Jordan-Eizenga.jpg" height="220" width="170" align="left" style="margin-right: 3%; margin-bottom: 0.3em;">
 
 [Jordan Eizenga](https://github.com/jeizenga) is a PhD student in the Computational Genomics Lab at the University of California Santa Cruz. His advisors are David Haussler and Benedict Paten. Jordan was originally trained as a mathematician, but made the switch to bioinformatics in 2015.
 
