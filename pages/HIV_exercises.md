@@ -1,6 +1,13 @@
 ---
 layout: page
 title: A Virus Pan-Genome
+schemadotorg:
+  "@context": http://schema.org/
+  "@type": CreativeWork
+  "genre": TrainingMaterial
+  isPartOf:
+      url: "https://gtpb.github.io/CPANG18/"
+      name: "CPANG18 - Computational PANGenomics"
 ---
 
 Today you will work in more self-directed fashion. The driving questions are:
@@ -91,7 +98,7 @@ To resolve this problem, we "prune" the graph with `vg mod -pl 16 -e 3` or `vg p
 #### ClustalO input
 
 #### Assembly options
-Currently, there are two assemblers installed on the workstations: 
+Currently, there are two assemblers installed on the workstations:
 
 - [bcalm2](https://github.com/GATB/bcalm), which just builds a compact De Bruijn graph, that is a graph composed of unitigs. Use you can use the `convertToGFA.py` script to convert the output to GFA.
 

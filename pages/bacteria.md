@@ -1,6 +1,13 @@
 ---
 layout: page
 title: Taking bacterial pan-genomes to the sequence level
+schemadotorg:
+  "@context": http://schema.org/
+  "@type": CreativeWork
+  "genre": TrainingMaterial
+  isPartOf:
+      url: "https://gtpb.github.io/CPANG18/"
+      name: "CPANG18 - Computational PANGenomics"
 ---
 
 Traditionally, pan-genomes for bacteria are gene based. That is, you study the set of genes found at a certain taxonomic unit, see [Tettelin et al., 2015](http://dx.doi.org/10.1016/j.mib.2014.11.016) for a review.
@@ -87,7 +94,7 @@ vg view -a aln.gam | jq -cr 'select(.score > 0)' | vg view -JaG - >aln.filt.gam
 
 Instead, it's possible to combine graphs by concatenating them via `cat`. However, they _must have separate id spaces_ or they will overwrite each other. To make a single joint id space, use `vg ids -j`, passing the files you want to join together on the command line:
 
-```
+```sh
 vg construct -v tiny/tiny.vcf.gz -r tiny/tiny.fa >tiny.vg
 cp tiny.vg 1.vg; cp tiny.vg 2.vg; cp tiny.vg 3.vg
 # these are the same
@@ -103,7 +110,7 @@ cat 1.vg 2.vg 3.vg | vg stats -lz -
 
 You can check how many reads per second you are aligning using:
 
-```
+```sh
 vg map -d x -f reads.fq.gz -j | pv -l >/dev/null
 ```
 

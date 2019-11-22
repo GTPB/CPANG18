@@ -1,6 +1,13 @@
 ---
 layout: page
 title: Missing genome reconstruction
+schemadotorg:
+  "@context": http://schema.org/
+  "@type": CreativeWork
+  "genre": TrainingMaterial
+  isPartOf:
+      url: "https://gtpb.github.io/CPANG18/"
+      name: "CPANG18 - Computational PANGenomics"
 ---
 
 Let's make a reference graph, align reads to it, and use surjection and k-means clustering to attempt to find the reads that map to the 5th genome. Finally, we'll assemble these and see if it matches known information about the fifth genome.
@@ -9,19 +16,19 @@ First we'll build and index the graph.
 
 We build the graph using `vg msga` from the input sequences. (Note that the assembly of these 4 genomes will always be circular, why is this?)
 
-```
+```bash
 vg msga -f REF4.fasta -w 1024 -D | vg mod -U 10 - | vg mod -c -  >REF4.vg
 ```
 
 We then index the graph with xg:
 
-```
+```bash
 vg index -x REF4.xg REF4.vg
 ```
 
 And we prune and index with GCSA2:
 
-```
+```bash
 vg index -g REF4.gcsa -k 16 -p <(vg mod -pl 16 -e 3 REF4.vg)
 ```
 
@@ -31,7 +38,7 @@ vg index -g REF4.gcsa -k 16 -p <(vg mod -pl 16 -e 3 REF4.vg)
 
 We then map the first 10k Illumina reads:
 
-```
+```bash
 vg map -d REF4 -f <(zcat SRR961514_1.fastq.gz | head -40000) >SRR961514_1.first10k.gam
 ```
 
@@ -48,7 +55,7 @@ done
 
 Now we join up the results to build one table:
 
-```
+```bash
 ( echo read.name id.896 id.HXB2 id.JRCSF id.NL43
 join <(zcat first10k.surj.896.tsv.gz | cut -f 1,3 | sort -V) <(zcat first10k.surj.HXB2.tsv.gz | cut -f 1,3 | sort -V) \
 | join  <(zcat first10k.surj.JRCSF.tsv.gz | cut -f 1,3| sort -V) - \
@@ -88,19 +95,19 @@ For each node that the alignment touches we record a 1, otherwise a 0.
 
 First we can run an alignment of part of the read set.
 
-```
+```bash
 vg map -d REF4 -f <(zcat SRR961669.fastq.gz | head -4000) >SRR961669.first1k.gam
 ```
 
 Then we extract the paths themselves as an alignment:
 
-```
+```bash
 vg paths -x REF4.vg >REF4.paths.gam
 ```
 
 Finally we can make a matrix representation of the read set and the graph paths.
 
-```
+```bash
 vg vectorize -f -x REF4.xg <(cat REF4.paths.gam SRR961669.first1k.gam) | gzip >SRR961669.vectorized.1k.tsv.gz
 ```
 
@@ -128,4 +135,3 @@ ggbiplot(pacbio.dist.pca) + geom_point(aes(color=pacbio.dist[5:nrow(pacbio.dist)
 ## Back
 
 Back to [main page](../index.md)
-

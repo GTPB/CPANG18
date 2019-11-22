@@ -2,6 +2,13 @@
 layout: page
 title: Learning objectives
 description: Description of CPANG18 learning objectives
+schemadotorg:
+  "@context": http://schema.org/
+  "@type": CreativeWork
+  "genre": TrainingMaterial
+  isPartOf:
+      url: "https://gtpb.github.io/CPANG18/"
+      name: "CPANG18 - Computational PANGenomics"
 ---
 
 Participants first will learn about limitations of linear reference-based methods and work through a brief refresher or introduction to standard approaches for processing sequencing data, including read alignment and variant calling.

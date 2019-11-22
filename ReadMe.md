@@ -11,9 +11,20 @@ The following co-authors contributed to the development of the training material
 
 * [Tobias Marschall](https://github.com/tobiasmarschall)
 * [Erik Garrison](https://github.com/ekg)
+* [Jordan Eizenga](https://github.com/jeizenga)
 
 #### Course Webpage
 This is the link to the [course webpage](http://gtpb.igc.gulbenkian.pt/bicourses/2018/CPANG18/), for further information about the course.
+
+---
+
+#### Host & Co-Sponsor
+
+<a href="http://www.igc.gulbenkian.pt/"><img src="./assets/readme_img/Logo_IGC_2014.png" alt="Instituto Gulbenkian de Ciência" width="250px"></a>
+
+#### Contributors
+
+<a href="https://biodata.pt/"><img src="./assets/readme_img/BIoData_and_co-financiadores.png" alt="Instituto Gulbenkian de Ciência" width="500px"></a>
 
 ---
 
