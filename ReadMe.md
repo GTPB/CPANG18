@@ -2,6 +2,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3813983.svg)](https://doi.org/10.5281/zenodo.3813983)
 
 ###  Instituto Gulbenkian de Ciência (IGC) - Oeiras, Portugal - March 6<sup>th</sup> - March 9<sup>th</sup> 2018
+Go to the [course oficial website](http://gtpb.igc.gulbenkian.pt/bicourses/2018/CPANG18/)
 
 ---
 
